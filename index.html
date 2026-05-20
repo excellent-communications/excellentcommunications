@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellent Communications and Construction Company Ltd</title>
+    <style>
+        /* 1. GLOBAL RESETS & PREMIUM DARK GOLD THEME */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0f172a; /* Deep elegant slate blue */
+            color: #f8fafc;
+            line-height: 1.6;
+            padding-bottom: 20px;
+        }
+
+        /* 2. STICKY NAVIGATION */
+        header {
+            background-color: #1e293b;
+            padding: 22px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #334155;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            max-width: 65%;
+            text-transform: uppercase;
+        }
+
+        .logo-text span {
+            color: #eab308; /* Premium Gold */
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: #eab308;
+        }
+
+        /* 3. HERO BANNER */
+        #hero {
+            padding: 80px 5% 60px 5%;
+            text-align: center;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .legacy-badge {
+            background-color: rgba(30, 41, 59, 0.7); 
+            color: #eab308; 
+            font-size: 0.8rem;
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 22px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: 2px solid #eab308; 
+        }
+
+        #hero h1 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        #hero h1 span {
+            color: #eab308; 
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 850px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* 4. MAIN LAYOUT SECTIONS */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #eab308; 
+            margin: 12px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* 5. CORE SPECIALTIES GRID */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #eab308; 
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: #38bdf8; 
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        /* 6. PORTFOLIO TRACK RECORD DESIGN */
+        .portfolio-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background-color: #1e293b;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .portfolio-column h3 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 8px;
+        }
+
+        .network-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .network-list li {
+            padding: 10px 14px;
+            background-color: #0f172a;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            border-left: 3px solid #eab308; 
+        }
+
+        .network-list li span {
+            color: #64748b;
+            font-size: 0.85rem;
+            display: block;
+        }
+
+        /* 7. CONTACT PLATFORM BOX */
+        .contact-box {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            padding: 45px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-numbers {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .phone-link {
+            font-size: 1.6rem;
+            color: #eab308; 
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .phone-link:hover {
+            color: #ca8a04;
+        }
+
+        /* 8. FOOTER DESIGN */
+        footer {
+            background-color: #0f172a;
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        /* RESPONSIVENESS MEDIA QUERIES */
+        @media (max-width: 900px) {
+            .portfolio-layout { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            .logo-text { max-width: 100%; text-align: center; }
+            nav a { margin: 0 10px; }
+            #hero h1 { font-size: 2rem; }
+            .contact-numbers { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">
+            <span>Excellent</span> Communications & Construction Co. Ltd.
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Stations Built</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <span class="legacy-badge">A Legacy of Excellence Since 2009</span>
+            <h1>Ready to Start Your Own <span>Radio or TV Station?</span></h1>
+            <p>We handle everything from licensing to launch. Powering Uganda's media landscape for over 15 years through technical partnerships, corporate setups, and flawless execution.</p>
+        </section>
+
+        <section class="container" id="services">
+            <h2>Our Core Specialties</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Paperwork Required By UCC</h3>
+                    <p>Complete application structures, full documentation setup, content schemes, and comprehensive technical feasibility studies tailored for smooth regulatory approvals.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Studio Setup (Radio & TV)</h3>
+                    <p>Complete execution of professional broadcast spaces. From advanced acoustic insulation and soundproofing grids to complete master control room wire routing.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Broadcast Equipment Sales</h3>
+                    <p>Direct procurement and deployment of high-grade broadcast hardware, transmitter units, professional audio consoles, mixing panels, and software matrix architectures.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Business Registration (URSB)</h3>
+                    <p>Streamlining legal business structures, corporate entity filings, and legal framework preparation necessary for official media operations ownership.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Online & DAB+ Radio Systems</h3>
+                    <p>Configuring digital broadcasting frameworks, cloud automation matrices, and global streaming nodes alongside modern DAB+ network configurations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Media Consultancy & Branding</h3>
+                    <p>End-to-end station restructuring, strategic market audience alignment, identity design, rebranding development, and post-setup on-air technical training.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="portfolio">
+            <h2>Our Proven Track Record</h2>
+            <p style="text-align: center; color: #94a3b8; margin: -25px auto 40px auto; max-width: 800px;">
+                Trusted by TV networks, radio stations, government bodies, and private partners. We take immense pride in managing every engineering layout and structural detail from A to Z.
+            </p>
+            
+            <div class="portfolio-layout">
+                <div class="portfolio-column">
+                    <h3>📺 Television Networks</h3>
+                    <ul class="network-list">
+                        <li>KBS TV <span>Kasasa Broadcasting Service</span></li>
+                        <li>Nyce TV <span>Nyce Media Network</span></li>
+                        <li>C.O.U. Family TV <span>Church of Uganda</span></li>
+                        <li>TV One <span>Television One Ltd</span></li>
+                        <li>Worship TV <span>Life Way Church Network</span></li>
+                        <li>Inspire TV <span>Dove Media Ltd</span></li>
+                        <li>GMTV <span>Green Monday Technologies</span></li>
+                        <li>KSTV <span>King Solomon Network</span></li>
+                        <li>Excel TV <span>Excellent Communications Network</span></li>
+                        <li>Promise TV <span>Full TV Network & Digital Broadcast Coverage</span></li>
+                        <li>Base2 Television <span>Premium Entertainment & Media Node</span></li>
+                        <li>Success TV <span>Success Media Network</span></li>
+                        <li>STV <span>Premium Terrestrial & Digital Entertainment Network</span></li>
+                        <li>Bliv TV <span>Believe Investments Network</span></li>
+                        <li>ATV / NOW TV <span>Apex Promotions Network</span></li>
+                        <li>KAB TV <span>Kampala Broadcasting Service</span></li>
+                    </ul>
+                </div>
+
+                <div class="portfolio-column">
+                    <h3>📻 Radio Stations</h3>
+                    <ul class="network-list">
+                        <li>Eastern Voice 102.3 FM <span>Regional Commercial Audio Stream</span></li>
+                        <li>Grace Radio 92.6 FM Mbarara <span>High-Fidelity Regional Broadcast</span></li>
+                        <li>GN Radio Mbarara <span>Good News Broadcasting Service</span></li>
+                        <li>Buyamba 90.7 FM Lyantonde <span>Regional Audio Network Integration</span></li>
+                        <li>Voice of Ruhinda <span>Regional Commercial Coverage</span></li>
+                        <li>Theo FM <span>Theo Communications Layout</span></li>
+                        <li>Hunter FM <span>Hunter Communications Infrastructure</span></li>
+                        <li>Success FM <span>Success Media Network</span></li>
+                        <li>Apex FM <span>Apex Promotions Network</span></li>
+                        <li>Busiro FM <span>Commercial Audio Stream Deployment</span></li>
+                        <li>Promise Radio <span>Audio Broadcast Network</span></li>
+                        <li>Ks Radio <span>King Solomon Network</span></li>
+                        <li>Excel Radio <span>Excel Communications Operations</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="contact">
+            <h2>Get Started</h2>
+            <div class="contact-box">
+                <p>Ready to launch, build, or streamline your TV or radio station efficiently? Reach out directly to our principal technical consultation group today.</p>
+                <p style="font-size: 0.9rem; color: #94a3b8;">Click below to initialize voice call or mobile chat instantly:</p>
+                
+                <div class="contact-numbers">
+                    <a href="tel:+256772998531" class="phone-link">📞 Call: 0772 998 531</a>
+                    <a href="https://wa.me/256702266206" target="_blank" class="phone-link" style="color: #4ade80;">💬 WhatsApp: 0702 266 206</a>
+                </div>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 20px;">Kampala, Uganda</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Excellent Communications and Construction Company Ltd. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
